@@ -1,5 +1,11 @@
 # xstate
 
+## 5.0.0-alpha.1
+
+### Patch Changes
+
+- [#3374](https://github.com/statelyai/xstate/pull/3374) [`a990f0ed1`](https://github.com/statelyai/xstate/commit/a990f0ed19e3b69cbfaa7d36c1b5bcf4c36daea4) Thanks [@Andarist](https://github.com/Andarist)! - Fixed an issue with actors not being reinstantiated correctly when an actor with the same ID was first stopped and then invoked/spawned again in the same microstep.
+
 ## 5.0.0-alpha.0
 
 ### Major Changes

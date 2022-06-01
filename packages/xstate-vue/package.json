@@ -33,7 +33,7 @@
   "peerDependencies": {
     "@xstate/fsm": "^2.0.0",
     "vue": "^3.0.0",
-    "xstate": "^5.0.0-alpha.0"
+    "xstate": "^5.0.0-alpha.1"
   },
   "peerDependenciesMeta": {
     "@xstate/fsm": {
@@ -49,7 +49,7 @@
     "@vue/compiler-sfc": "^3.0.11",
     "@xstate/fsm": "2.0.0",
     "vue": "^3.0.11",
-    "xstate": "5.0.0-alpha.0"
+    "xstate": "5.0.0-alpha.1"
   },
   "preconstruct": {
     "entrypoints": [
