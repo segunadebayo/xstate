@@ -1,5 +1,24 @@
 # @xstate/test
 
+## 1.0.0
+
+### Minor Changes
+
+- [#3364](https://github.com/statelyai/xstate/pull/3364) [`46e886deb`](https://github.com/statelyai/xstate/commit/46e886deb1abd39256cfd7b61033b72d34f17a1c) Thanks [@mattpocock](https://github.com/mattpocock)! - Improved test output by removing id from description
+
+### Patch Changes
+
+- [#3367](https://github.com/statelyai/xstate/pull/3367) [`b8cf8cfdc5d0e4c0b8f864d55a0f3126de3357f2`](https://github.com/statelyai/xstate/commit/b8cf8cfdc5d0e4c0b8f864d55a0f3126de3357f2) Thanks [@Andarist](https://github.com/Andarist)! - Fixed `getShortestPathsTo` issue that caused candidate paths to be incorrectly removed while deduplicating generated paths.
+
+* [#3365](https://github.com/statelyai/xstate/pull/3365) [`3a63789a7`](https://github.com/statelyai/xstate/commit/3a63789a7704b69dda17b7536ea93b80616e3e76) Thanks [@davidkpiano](https://github.com/davidkpiano)! - The `serializeState()` path traversal option now provides 3 arguments to the function passed in:
+
+  1. `state` - the current state
+  2. `event` - the event that caused traversal to this state
+  3. `prevState` 🆕 - the state before the current state (may be `undefined`)
+
+* Updated dependencies [[`3a63789a7`](https://github.com/statelyai/xstate/commit/3a63789a7704b69dda17b7536ea93b80616e3e76)]:
+  - @xstate/graph@2.0.0
+
 ## 1.0.0-alpha.0
 
 ### Major Changes
@@ -24,7 +43,7 @@
     }
   });
 
-  model.getPaths().forEach((path) => {
+  model.getPaths().forEach(path => {
     it(path.description, async () => {
       await path.test({
         events: {
@@ -99,7 +118,7 @@
   New:
 
   ```ts
-  const paths = model.getPaths().forEach((path) => {
+  const paths = model.getPaths().forEach(path => {
     path.test({
       events: {}
     });
@@ -111,7 +130,7 @@
 - [#3036](https://github.com/statelyai/xstate/pull/3036) Thanks [@mattpocock](https://github.com/mattpocock), [@davidkpiano](https://github.com/davidkpiano)! - Added `states` to `path.test()`:
 
   ```ts
-  const paths = model.getPaths().forEach((path) => {
+  const paths = model.getPaths().forEach(path => {
     path.test({
       states: {
         myState: () => {},

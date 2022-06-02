@@ -1,5 +1,15 @@
 # @xstate/graph
 
+## 2.0.0
+
+### Patch Changes
+
+- [#3365](https://github.com/statelyai/xstate/pull/3365) [`3a63789a7`](https://github.com/statelyai/xstate/commit/3a63789a7704b69dda17b7536ea93b80616e3e76) Thanks [@davidkpiano](https://github.com/davidkpiano)! - The `serializeState()` path traversal option now provides 3 arguments to the function passed in:
+
+  1. `state` - the current state
+  2. `event` - the event that caused traversal to this state
+  3. `prevState` 🆕 - the state before the current state (may be `undefined`)
+
 ## 2.0.0-alpha.0
 
 ### Major Changes
@@ -57,7 +67,7 @@
 
   const shortestPaths = getShortestPaths(countMachine, {
     events: {
-      ADD: (state) => {
+      ADD: state => {
         // contrived example: if `context.count` is >= 10, increment by 10
         return state.context.count >= 10
           ? [{ type: 'ADD', value: 10 }]
